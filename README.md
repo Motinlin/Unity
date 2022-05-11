@@ -65,5 +65,5 @@ if (Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask
 ### 3.4 人物发射炮弹
 ### 3.5 人物血条
 
-## 函数
+## 4.函数
 
