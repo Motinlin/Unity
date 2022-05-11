@@ -4,13 +4,21 @@
 注意将其设置为Mutiple类型
 ### 1.2 多个Sprite组成一个父物体时
 其坐标显示为对于父物体(空物体)的局部坐标(相对坐标)，应该将主要部件的坐标设为(0,0,0),以便为组合物体(父物体)创建RigidBody
+
 ## 2.关于摄像机
 ### 2.1 有时候Game里面没有出现搭建好的场景
 检查摄像机Z轴坐标是否小于场景中Sprite的Z轴坐标
-## 3.关于人物移动
+### 2.2 实现相机跟随人物移动
+利用Cinemachine,创建名为CameraConfiner的空物体为其设置碰撞体从而限定跟随范围
+
+**注意要为其单独设一个Layer,并取消该层与其他层的碰撞**
+### 2.3 实现背景补偿
+https://github.com/Motinlin/Unity/blob/main/Assets/Assets_1/Scripts/BackGround.cs
+
+## 3.关于人物
 ### 3.1 移动人物时若不想要人物旋转(2D)
 将刚体组件中的z轴锁住。
-### 3.2关于实现跳跃
+### 3.2 关于实现跳跃
 首先应明确什么情况下能跳跃，设置变量布尔类型变量
 ```c#
 public bool bJump = false //因为人物一开始从空中落下
@@ -53,3 +61,9 @@ if (Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask
     }
 }
 ```
+### 3.3 人物转身
+### 3.4 人物发射炮弹
+### 3.5 人物血条
+
+## 函数
+
